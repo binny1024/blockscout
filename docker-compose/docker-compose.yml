@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3.8' #指定本yml一从的compose 哪个版本制定的
 
-services:
-  redis_db:
+services: #定义服务
+  redis_db: # redis_db 服务
     extends:
       file: ./services/docker-compose-redis.yml
       service: redis_db
