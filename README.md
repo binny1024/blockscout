@@ -51,7 +51,40 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution and pull request protoco
 
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
+# 配置
+- 修改图片需要重新编译
+## 图片修改稿路径
+- 资源
+```
+cd apps/block_scout_web/assets/static/images
+```
+- 配置
+
+```dotenv
+LOGO=/images/lingverse_logo.svg
+```
+
 # 启动
+- 构建
 ```sh
 DOCKER_TAG=1.0.0 docker-compose up --build
+```
+- 再次启动
+```shell
+DOCKER_TAG=1.0.0 docker-compose up
+```
+
+- 修改logo
+
+```shell
+DOCKER_TAG=1.0.2 docker-compose up --build
+```
+- 再次启动
+```shell
+DOCKER_TAG=1.0.1 docker-compose up
+```
+
+## logo修改
+```shell
+ DOCKER_TAG=1.0.3 docker-compose  -f docker-compose-no-build-frontend.yml up
 ```
