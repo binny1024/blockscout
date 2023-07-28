@@ -43,6 +43,7 @@ services: #定义服务
       - 4000:4000
     volumes:
       - ./logs/:/app/logs/
+#      - /Users/binny/lv-projects/images/:/images
 
   smart-contract-verifier:
     extends:
