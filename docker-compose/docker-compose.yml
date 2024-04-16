@@ -41,10 +41,10 @@ services:
     links:
       - db:database
     environment:
-        ETHEREUM_JSONRPC_HTTP_URL: https://node5.lingjingchain.cn
-        ETHEREUM_JSONRPC_TRACE_URL:  https://node5.lingjingchain.cn
-        ETHEREUM_JSONRPC_WS_URL: wss://wss5.lingjingchain.cn
-        CHAIN_ID: '1888'
+      ETHEREUM_JSONRPC_HTTP_URL: https://node5.lingjingchain.cn
+      ETHEREUM_JSONRPC_TRACE_URL: https://node5.lingjingchain.cn
+      ETHEREUM_JSONRPC_WS_URL: wss://wss5.lingjingchain.cn
+      CHAIN_ID: '1888'
 
   visualizer:
     extends:
@@ -83,7 +83,10 @@ services:
     extends:
       file: ./services/stats.yml
       service: stats
-
+  smart-contract-verifier:
+    extends:
+      file: ./services/smart-contract-verifier.yml
+      service: smart-contract-verifier
   proxy:
     depends_on:
       - backend
